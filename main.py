@@ -40,7 +40,7 @@ async def on_message(message):
         # Check if the bot is mentioned and the message contains the embed title
         if client.user.mentioned_in(message) and any("### 🎟️\xa0\xa0Raffle ended!" in embed.description for embed in message.embeds):
             response = random.choice(responses)
-            await asyncio.sleep(random.randint(5, 20))
+            await asyncio.sleep(random.randint(5, 8))
             await message.channel.send(response)
 
         # Your existing code for the raffle functionality with components
